@@ -5,7 +5,7 @@ import streamlit as st
 from sentence_transformers import SentenceTransformer
 import faiss
 print("Faiss imported successfully!")
-from openai import OpenAI
+import openai
 import requests
 from dotenv import load_dotenv
 load_dotenv()
@@ -15,8 +15,8 @@ base_url = "https://api.aimlapi.com/"
 
 
 # Initialize the AIML API client
-client = OpenAI(api_key=aiml_api_key, base_url=base_url)
-
+# client = OpenAI(api_key=aiml_api_key, base_url=base_url)
+openai.api_key = aiml_api_key  # Set the API key for OpenAI
 
 def gym_app():
     
@@ -112,7 +112,7 @@ def gym_app():
         Ensure the meal options are versatile and easy to prepare, allowing for flexibility throughout the week without being tied to specific days.
         """
 
-        chat_completion = client.chat.completions.create(
+        chat_completion = openai.chat.completions.create(
             model="o1-mini",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=65536 ,
@@ -276,7 +276,7 @@ def med_app():
         """
 
        
-        chat_completion = client.chat.completions.create(
+        chat_completion =openai.chat.completions.create(
             model="o1-mini",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=65536 ,
@@ -332,8 +332,8 @@ def ath_app():
     st.write("Wait")
     
     def respond_athletes(user_input,multi_turn=False):
-        client = OpenAI(api_key=aiml_api_key, base_url=base_url)
-        chat_completion = client.chat.completions.create(
+        openai.api_key = aiml_api_key  # Set the API key for OpenAI
+        chat_completion = openai.chat.completions.create(
             messages=[
                 {
                     "role": "user",
