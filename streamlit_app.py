@@ -4,6 +4,7 @@ import os
 import streamlit as st
 from sentence_transformers import SentenceTransformer
 import faiss
+print("Faiss imported successfully!")
 from openai import OpenAI
 import requests
 from dotenv import load_dotenv

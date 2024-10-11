@@ -1,6 +1,11 @@
-streamlit==1.11.1
-sentence-transformers==2.2.0
-faiss-cpu==1.7.1
-openai==0.22.0
-python-dotenv==0.20.0
-requests==2.28.1  # In case your script uses requests, ensure it's included
+streamlit==1.38.0
+sentence-transformers==3.0.1
+faiss-cpu==1.8.0.post1
+openai==0.11.2
+python-dotenv==1.0.1
+requests==2.32.0
+numpy==1.26.4
+pandas==2.1.4
+scikit-learn==1.5.1
+transformers==4.44.2
+torch==2.4.0
