@@ -32,7 +32,8 @@ This Streamlit application offers tailored health and fitness advice using advan
 Create a .env file in the root directory of the project and add the following environment variable:
 
  AIML_API_KEY='your_openai_api_key_here'
-Note: The .env file is not tracked by git as specified in the .gitignore to keep sensitive data such as API keys private.
+  
+  Note: The .env file is not tracked by git as specified in the .gitignore to keep sensitive data such as API keys private.
 
 5. **Running the Application**
 To run the app, execute the following command:
